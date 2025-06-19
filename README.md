@@ -4,7 +4,6 @@ This is a tool for unpacking all .pak files from Evolve. The actual pak decrypte
 
 ## How to use
 - clone this repo
-- make sure to clone the zip2 submodule, as i had to patch out the CRC verification (for some reason some files have bad CRCs but still work...)
 - build the program: `cargo build --release`
 - Copy the EvolveUnpaker.exe as well as a pak decrypter for Evolve into a folder next to your EvolveGame folder
   - If your EvolveGame folder is located in .../steamapps/common/EvolveGame, it should look something like this (EvolveTools can be named differently):
