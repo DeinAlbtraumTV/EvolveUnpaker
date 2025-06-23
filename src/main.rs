@@ -185,7 +185,7 @@ async fn main() {
                     // extract text from clipboard
                     let text = clipboard.get_text().unwrap();
 
-                    lua_file.set_extension(".decomp.lua");
+                    lua_file.set_extension("decomp.lua");
                     let mut file = File::options().write(true).create(true).open(lua_file).unwrap();
                     file.write(text.as_bytes()).unwrap();
                 }
