@@ -164,7 +164,6 @@ async fn main() {
                 }
 
                 for mut lua_file in lua_files {
-                    // remove the hidden class from uploader
                     uploader.click().await.unwrap();
 
                     sleep_until(Instant::now() + Duration::from_secs(3)).await;
@@ -181,6 +180,8 @@ async fn main() {
                     enigo.key(enigo::Key::A, Click).unwrap();
                     enigo.key(enigo::Key::C, Click).unwrap();
                     enigo.key(enigo::Key::Control, Release).unwrap();
+
+                    sleep_until(Instant::now() + Duration::from_secs(1)).await;
 
                     // extract text from clipboard
                     let text = clipboard.get_text().unwrap();
